@@ -25,9 +25,10 @@ import dbconsole.MySQL;
 public class FrameSystemView extends Frame implements ActionListener,WindowListener{
 	
 	private Button button = new Button("表示");
-	CardLayout cardlayout;
-	Panel panel1;
+	CardLayout cardlayout; 
+	Panel panel1; //パネルレイアウトの定義
 	Panel panel2;
+	
 	public FrameSystemView(FrameSystemController controller) {
 		// TODO Auto-generated constructor stub
 		panel1 = new Panel();
@@ -36,6 +37,7 @@ public class FrameSystemView extends Frame implements ActionListener,WindowListe
 		setTitle("DataBase");
 		cardlayout = new CardLayout();
 		setLayout(cardlayout);
+		panel2.add(new Label("クリックでデータベースを取得→"));
 		panel2.add(button,BorderLayout.CENTER);
 		add(panel2);
 		add(panel1);
